@@ -1,0 +1,112 @@
+aside {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    width: 640px;
+    height: calc(100% - 52px);
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px 0px;
+}
+
+header {
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.top-label {
+    font-size: 10px;
+    color: #747676;
+}
+
+.bot-label {
+    font-size: 14px;
+}
+
+.top-header, .panel-labels-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.top-header {
+    justify-content: space-between;
+}
+
+.panel-labels-wrapper {
+    gap: 8px;
+    align-items: center;
+}
+
+.panel-labels {
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-button {
+    width: 42px;
+    height: 42px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.header-button:hover {
+    background-color: #fafafa;
+}
+
+.arrow {
+    fill: #2c6ecb;
+    transition: fill 0.2s;
+}
+
+.header-button:hover .arrow {
+    fill: #1F5199;
+}
+
+.disabled {
+    background-color: #F5F5F5;
+    cursor: default;
+}
+
+.input {
+    width: 100%;
+    height: 36px;
+    padding: 8px 14px 8px 42px;
+    font-size: 14px;
+
+    box-sizing: border-box;
+    caret-color: #59586A;
+    background: #fff url(/assets/icon_search.svg) no-repeat scroll 10px 6px;
+    border: solid 1px #AEB4B9;
+    border-radius: 4px;
+    color: #59586A;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+.input:focus, .input:focus-visible {
+    outline: none;
+    box-shadow:
+    0 0 0 1px #fff,
+    0 0 0 3px #458FFF;
+}
+
+.input::-webkit-search-cancel-button {
+    cursor: pointer;
+    position: relative;
+    right: -14px;
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    background: url(/assets/icon_close.svg);
+    background-repeat:no-repeat;
+    background-position: center center;
+    transition: background-color 0.2s;
+}
+
+.input::-webkit-search-cancel-button:hover {
+    background-color: #fafafa;
+}

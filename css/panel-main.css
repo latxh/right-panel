@@ -1,0 +1,122 @@
+aside main {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.col-wrap {
+    flex: 1;
+    position: relative;
+}
+
+aside main .left-col, aside main .right-col{
+    overflow-y: scroll;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.active-trigger {
+    margin: 8px 8px 8px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 13px;
+}
+
+.trigger-accent {
+    height: 53px;
+    border-radius: 0 20px 20px 0;
+    width: 3px;
+    background: #008060;
+}
+
+.inner-trigger {
+    cursor: pointer;
+    flex: 1;
+    padding: 12px 12px;
+    border-radius: 5px;
+    background: #F1F8F5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.label-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.chevron {
+    fill: #008060;
+}
+
+.green-sq {
+    width: 29px;
+    height: 29px;
+    border-radius: 6px;
+    background: #008060;
+}
+
+.section-label {
+    font: unset;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #000;
+    background-color: #F4F6F8;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: all 0.2s;
+}
+
+.built-link {
+    cursor: pointer;
+}
+
+.section-label:hover .hide-prompt, .built-link:hover {
+    color: #1F5199;
+    text-decoration: underline;
+}
+
+.hide-prompt, .built-link {
+    color: #2c6ecb;
+}
+
+.section-label-wrapper {
+    padding: 0 8px 0 16px;
+}
+
+.top-card {
+    background-color: #F5F5F5;
+    padding: 12px;
+    border-radius: 5px;
+    margin: 8px;
+}
+
+.built-p {
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+.title-options {
+    font-size: 14px;
+}
+
+.small {
+    margin: 0;
+    font-size: 12px;
+}

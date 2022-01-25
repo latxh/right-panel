@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow Panel v1</title>
+    <link rel="stylesheet" href="/css/overall.css">
+    <link rel="stylesheet" href="/css/panel-header.css">
+    <link rel="stylesheet" href="/css/panel-main.css">
+    <link rel="stylesheet" href="/css/overall-access.css">
+</head>
+
+<body>
+    <nav>
+        <p>Flow Panel Accessibilty Prototype</p>
+        <a class="chip" href="/v2">v1</a>
+    </nav>
+
+    <div class="access-wrapper">
+        <div class="info-card hide">
+            <div>
+                <p>Keyboard Navigation</p>
+            </div>
+            <div class="nav-row">
+                <p><b>Tab</b></p>
+                <p>Navigate to interactive elements</p>
+            </div>
+            <div class="nav-row">
+                <p><b>Shift + Tab</b></p>
+                <p>Navigate backwards</p>
+            </div>
+            <div class="nav-row">
+                <p><b>Up Arrow / Down Arrow</b></p>
+                <p>Navigate within tablist</p>
+            </div>
+            <div class="nav-row">
+                <p><b>Enter</b></p>
+                <p>Activate a button or link</p>
+            </div>
+        </div>
+        <button onclick="accessPopup()" class="header-button access">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+                <path d="M0 0h24v24H0V0z" fill="none" />
+                <path
+                    d="M20.5 6c-2.61.7-5.67 1-8.5 1s-5.89-.3-8.5-1L3 8c1.86.5 4 .83 6 1v13h2v-6h2v6h2V9c2-.17 4.14-.5 6-1l-.5-2zM12 6c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z" />
+            </svg>
+        </button>
+    </div>
+
+    <aside>
+        <header>
+            <div class="top-header">
+                <div class="panel-labels-wrapper">
+                    <button class="header-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 20 20">
+                            <path class="arrow"
+                                d="M17.333,9.833H7.192L11.85,5.175,10.667,4,4,10.667l6.667,6.667,1.175-1.175L7.192,11.5H17.333Z"
+                                transform="translate(-0.667 -0.667)" />
+                        </svg>
+                    </button>
+                    <div class="panel-labels">
+                        <p class="top-label">SELECT A TASK</p>
+                        <p class="bot-label">Triggers > <b>Shopify</b></p>
+                    </div>
+                </div>
+                <button class="header-button disabled" disabled>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 20 20">
+                        <defs>
+                            <style>
+                                .c {
+                                    opacity: 0.4;
+                                }
+
+                                .d {
+                                    fill: none;
+                                }
+                            </style>
+                        </defs>
+                        <g class="c">
+                            <path class="d" d="M0,0H20V20H0Z" />
+                            <path
+                                d="M16.667,6.175,15.492,5,10.833,9.658,6.175,5,5,6.175l4.658,4.658L5,15.492l1.175,1.175,4.658-4.658,4.658,4.658,1.175-1.175-4.658-4.658Z"
+                                transform="translate(-0.833 -0.833)" />
+                        </g>
+                    </svg>
+                </button>
+            </div>
+            <input placeholder="Search..." class="input" type="search">
+        </header>
+
+        <main>
+            <div class="col-wrap">
+                <div class="left-col">
+
+                    <div class="active-trigger">
+                        <div class="trigger-accent"></div>
+                        <div class="inner-trigger" tabindex="0">
+                            <div class="label-icon">
+                                <div class="green-sq"></div>
+                                <p>Shopify</p>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path class="chevron" d="M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="section-label-wrapper">
+                        <div class="section-label">
+                            <p>Installed App Triggers:</p>
+                        </div>
+                    </div>
+
+                    <div class="active-trigger">
+                        <div class="trigger-accent"></div>
+                        <div class="inner-trigger" tabindex="0">
+                            <div class="label-icon">
+                                <div class="green-sq"></div>
+                                <p>Shopify</p>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path class="chevron" d="M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z" />
+                            </svg>
+                        </div>
+                    </div>
+
+
+                    <div class="section-label-wrapper">
+                        <button class="section-label" tabindex="0" onclick="hideApps()">
+                            <p>Get More Actions:</p>
+                            <p class="hide-prompt">Show</p>
+                        </button>
+                    </div>
+
+                    <div class="more-apps hide">
+
+                        <div class="active-trigger">
+                            <div class="trigger-accent"></div>
+                            <div class="inner-trigger" tabindex="0">
+                                <div class="label-icon">
+                                    <div class="green-sq"></div>
+                                    <p>Shopify</p>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path class="chevron" d="M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="active-trigger">
+                            <div class="trigger-accent"></div>
+                            <div class="inner-trigger" tabindex="0">
+                                <div class="label-icon">
+                                    <div class="green-sq"></div>
+                                    <p>Shopify</p>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path class="chevron" d="M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="active-trigger">
+                            <div class="trigger-accent"></div>
+                            <div class="inner-trigger" tabindex="0">
+                                <div class="label-icon">
+                                    <div class="green-sq"></div>
+                                    <p>Shopify</p>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path class="chevron" d="M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="active-trigger">
+                            <div class="trigger-accent"></div>
+                            <div class="inner-trigger" tabindex="0">
+                                <div class="label-icon">
+                                    <div class="green-sq"></div>
+                                    <p>Shopify</p>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path class="chevron" d="M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="active-trigger">
+                            <div class="trigger-accent"></div>
+                            <div class="inner-trigger" tabindex="0">
+                                <div class="label-icon">
+                                    <div class="green-sq"></div>
+                                    <p>Shopify</p>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path class="chevron" d="M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="active-trigger">
+                            <div class="trigger-accent"></div>
+                            <div class="inner-trigger" tabindex="0">
+                                <div class="label-icon">
+                                    <div class="green-sq"></div>
+                                    <p>Shopify</p>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path class="chevron" d="M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="active-trigger">
+                            <div class="trigger-accent"></div>
+                            <div class="inner-trigger" tabindex="0">
+                                <div class="label-icon">
+                                    <div class="green-sq"></div>
+                                    <p>Shopify</p>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path class="chevron" d="M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="active-trigger">
+                            <div class="trigger-accent"></div>
+                            <div class="inner-trigger" tabindex="0">
+                                <div class="label-icon">
+                                    <div class="green-sq"></div>
+                                    <p>Shopify</p>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path class="chevron" d="M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="active-trigger">
+                            <div class="trigger-accent"></div>
+                            <div class="inner-trigger" tabindex="0">
+                                <div class="label-icon">
+                                    <div class="green-sq"></div>
+                                    <p>Shopify</p>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path class="chevron" d="M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="active-trigger">
+                            <div class="trigger-accent"></div>
+                            <div class="inner-trigger" tabindex="0">
+                                <div class="label-icon">
+                                    <div class="green-sq"></div>
+                                    <p>Shopify</p>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path class="chevron" d="M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="active-trigger">
+                            <div class="trigger-accent"></div>
+                            <div class="inner-trigger" tabindex="0">
+                                <div class="label-icon">
+                                    <div class="green-sq"></div>
+                                    <p>Shopify</p>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path class="chevron" d="M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="active-trigger">
+                            <div class="trigger-accent"></div>
+                            <div class="inner-trigger" tabindex="0">
+                                <div class="label-icon">
+                                    <div class="green-sq"></div>
+                                    <p>Shopify</p>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path class="chevron" d="M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="active-trigger">
+                            <div class="trigger-accent"></div>
+                            <div class="inner-trigger" tabindex="0">
+                                <div class="label-icon">
+                                    <div class="green-sq"></div>
+                                    <p>Shopify</p>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path class="chevron" d="M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="active-trigger">
+                            <div class="trigger-accent"></div>
+                            <div class="inner-trigger" tabindex="0">
+                                <div class="label-icon">
+                                    <div class="green-sq"></div>
+                                    <p>Shopify</p>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path class="chevron" d="M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="active-trigger">
+                            <div class="trigger-accent"></div>
+                            <div class="inner-trigger" tabindex="0">
+                                <div class="label-icon">
+                                    <div class="green-sq"></div>
+                                    <p>Shopify</p>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path class="chevron" d="M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="col-wrap">
+                <div class="right-col">
+                    <div class="top-card">
+                        <p>Lorem Ipsum</p>
+                        <p class="built-p">Built by: <a class="built-link" href="">Lorem Ipsum</a></p>
+                    </div>
+
+                    <div class="top-card" tabindex="0">
+                        <p class="title-options"><b>Lorem Ipsum</b></p>
+                        <p class="built-p small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="top-card" tabindex="0">
+                        <p class="title-options"><b>Lorem Ipsum</b></p>
+                        <p class="built-p small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="top-card" tabindex="0">
+                        <p class="title-options"><b>Lorem Ipsum</b></p>
+                        <p class="built-p small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="top-card" tabindex="0">
+                        <p class="title-options"><b>Lorem Ipsum</b></p>
+                        <p class="built-p small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="top-card" tabindex="0">
+                        <p class="title-options"><b>Lorem Ipsum</b></p>
+                        <p class="built-p small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="top-card" tabindex="0">
+                        <p class="title-options"><b>Lorem Ipsum</b></p>
+                        <p class="built-p small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="top-card" tabindex="0">
+                        <p class="title-options"><b>Lorem Ipsum</b></p>
+                        <p class="built-p small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="top-card" tabindex="0">
+                        <p class="title-options"><b>Lorem Ipsum</b></p>
+                        <p class="built-p small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="top-card" tabindex="0">
+                        <p class="title-options"><b>Lorem Ipsum</b></p>
+                        <p class="built-p small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="top-card" tabindex="0">
+                        <p class="title-options"><b>Lorem Ipsum</b></p>
+                        <p class="built-p small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="top-card" tabindex="0">
+                        <p class="title-options"><b>Lorem Ipsum</b></p>
+                        <p class="built-p small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="top-card" tabindex="0">
+                        <p class="title-options"><b>Lorem Ipsum</b></p>
+                        <p class="built-p small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="top-card" tabindex="0">
+                        <p class="title-options"><b>Lorem Ipsum</b></p>
+                        <p class="built-p small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="top-card" tabindex="0">
+                        <p class="title-options"><b>Lorem Ipsum</b></p>
+                        <p class="built-p small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="top-card" tabindex="0">
+                        <p class="title-options"><b>Lorem Ipsum</b></p>
+                        <p class="built-p small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="top-card" tabindex="0">
+                        <p class="title-options"><b>Lorem Ipsum</b></p>
+                        <p class="built-p small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="top-card" tabindex="0">
+                        <p class="title-options"><b>Lorem Ipsum</b></p>
+                        <p class="built-p small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="top-card" tabindex="0">
+                        <p class="title-options"><b>Lorem Ipsum</b></p>
+                        <p class="built-p small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+
+
+                </div>
+            </div>
+        </main>
+    </aside>
+
+</body>
+
+<script>
+    let infoCard = document.querySelector('.info-card')
+    let moreApps = document.querySelector('.more-apps')
+    let hidePrompt = document.querySelector('.hide-prompt')
+    // const elements = document.getElementsByClassName("active-trigger");
+
+    // for (const element of elements) {
+    //     element.addEventListener("click", activeApp);
+    // };
+
+    // function activeApp(event) {
+    //     event.target.classList.toggle('hide');
+    // }
+
+    function accessPopup() {
+        infoCard.classList.toggle('hide');
+    }
+    function hideApps() {
+        moreApps.classList.toggle('hide');
+        if (moreApps.classList.contains('hide')) {
+            hidePrompt.innerHTML = "Show";
+        } else {
+            hidePrompt.innerHTML = "Hide";
+        }
+    }
+</script>
+
+</html>

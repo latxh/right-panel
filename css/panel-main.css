@@ -46,6 +46,7 @@ aside main .left-col, aside main .right-col{
     align-items: center;
     justify-content: space-between;
     gap: 8px;
+    transition: all 0.2s;
 }
 
 .label-icon {
@@ -64,6 +65,23 @@ aside main .left-col, aside main .right-col{
     height: 29px;
     border-radius: 6px;
     background: #008060;
+}
+
+.non-active {
+    background: #fff;
+}
+
+.active-trigger:hover .non-active {
+    background: #F5F5F5;
+}
+
+.default {
+    background: #fff;
+}
+
+.grey {
+    background: #808080;
+    fill: #808080;
 }
 
 .section-label {

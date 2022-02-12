@@ -2,7 +2,8 @@
     flex: 1;
 }
 
-app-card {
+app-card:focus,
+app-card:focus-visible {
     outline: none;
 }
 

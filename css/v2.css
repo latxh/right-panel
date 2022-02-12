@@ -2,6 +2,10 @@
     flex: 1;
 }
 
+app-card {
+    outline: none;
+}
+
 /* app-card:focus, */
 app-card:focus .top-card,
 app-card:focus .inner-trigger {

@@ -98,7 +98,7 @@ aside main .left-col, aside main .right-col{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    transition: all 0.2s;
+    transition: color 0.2s;
 }
 
 .built-link {

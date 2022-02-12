@@ -79,7 +79,7 @@ header {
 
     box-sizing: border-box;
     caret-color: #59586A;
-    background: #fff url(/right-panel/assets/icon_search.svg) no-repeat scroll 10px 6px;
+    background: #fff url(https://latxh.github.io/right-panel/assets/icon_search.svg) no-repeat scroll 10px 6px;
     border: solid 1px #AEB4B9;
     border-radius: 4px;
     color: #59586A;
@@ -101,7 +101,7 @@ header {
     width: 30px;
     height: 30px;
     border-radius: 6px;
-    background: url(/right/assets/icon_close.svg);
+    background: url(https://latxh.github.io/right-panel/assets/icon_close.svg);
     background-repeat:no-repeat;
     background-position: center center;
     transition: background-color 0.2s;

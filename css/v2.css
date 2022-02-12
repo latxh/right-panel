@@ -3,13 +3,20 @@
 }
 
 app-card:focus {
-    border: 2px solid #478EFF;
+    outline: none;
+    box-shadow:
+    0 0 0 1px #fff,
+    0 0 0 3px #458FFF;
 }
 
 app-card:focus:not(:focus-visible) {
-    border: none;
+    outline: none;
+    box-shadow: none;
 }
 
 app-card:focus-visible {
-    border: 2px solid #478EFF;
+    outline: none;
+    box-shadow:
+    0 0 0 1px #fff,
+    0 0 0 3px #458FFF;
 }

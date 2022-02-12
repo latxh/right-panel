@@ -1,3 +1,15 @@
 .active-trigger app-card {
     flex: 1;
 }
+
+app-card:focus {
+    outline: 2px solid #478EFF;
+}
+
+app-card:focus:not(:focus-visible) {
+    outline: none;
+}
+
+app-card:focus-visible {
+    outline: 2px solid #478EFF;
+}

@@ -2,19 +2,19 @@
     flex: 1;
 }
 
-app-card:focus,
+/* app-card:focus, */
 app-card:focus .top-card,
 app-card:focus .inner-trigger {
     outline: 2px solid #478EFF;
 }
 
-app-card:focus:not(:focus-visible),
+/* app-card:focus:not(:focus-visible), */
 app-card:focus:not(:focus-visible) .top-card,
 app-card:focus:not(:focus-visible) .inner-trigger {
     outline: none;
 }
 
-app-card:focus-visible,
+/* app-card:focus-visible, */
 app-card:focus-visible .top-card,
 app-card:focus-visible .inner-trigger {
     outline: 2px solid #478EFF;
